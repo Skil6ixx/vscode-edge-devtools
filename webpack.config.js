@@ -1,28 +1,14 @@
 // @ts-check
 /* eslint-disable @typescript-eslint/no-var-requires */
-
 const copyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const { DefinePlugin } = require('webpack');
+const { commonConfig } = require('./commonConfig');
 
-/** @type {Partial<import('webpack').Configuration>} */
-const commonConfig = {
-    devtool: 'source-map',
-    mode: 'production',
-    module: {
-        rules: [
-            {
-                exclude: /node_modules/,
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-            },
-        ],
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
-};
-
+ {
+    };
+    
+}
 /**
  * @param {Record<string, unknown>} env
  * @returns {import('webpack').Configuration | import('webpack').Configuration[]}
